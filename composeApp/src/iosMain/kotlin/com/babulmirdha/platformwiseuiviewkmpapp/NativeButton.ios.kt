@@ -1,22 +1,27 @@
 package com.babulmirdha.platformwiseuiviewkmpapp
+
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
-
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.UIKitViewController
 
 @Composable
-actual fun HelloView(modifier: Modifier) {
+actual fun NativeButton(onClick: () -> Unit, modifier: Modifier) {
+
     val factory = LocalNativeViewFactory.current
 
     UIKitViewController(
         modifier = modifier
-            .width(200.dp)
-            .height(100.dp), // adjust dimensions as needed
+            .width(100.dp)
+            .height(50.dp),
         factory = {
-            factory.createHelloSwiftView()
+            factory.createButtonView(
+                label = "IOS Button",
+                onClick = onClick
+            )
         }
     )
+
 }
