@@ -1,4 +1,4 @@
-rootProject.name = "PlatformWiseUIViewKmpApp"
+rootProject.name = "NativeViewKmpApp"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
