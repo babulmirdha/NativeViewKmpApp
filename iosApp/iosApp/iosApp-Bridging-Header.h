@@ -1,1 +1,0 @@
-#import "HelloSwiftView.h"
